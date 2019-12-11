@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Login from './components/Login';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Friends from './components/Friends';
+import FriendsList from './components/FriendsList';
 import PrivateRoute from './components/PrivateRoute';
 
 // const ProtectedRoute = ({ component: undefined, ...rest}) => {
@@ -22,7 +22,7 @@ function App() {
           </li>
         </ul>
         <Route path="/login" component={Login} />
-        <PrivateRoute exact path="/friends" component={Friends} />
+        <PrivateRoute exact path="/friends" component={FriendsList} />
       </div>
     </Router>
   );
