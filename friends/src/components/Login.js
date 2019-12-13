@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+import axiosWAuth from '../helpers.js/axiosWAuth';
 // import { Route, Router } from 'react-router-dom';
 
 class Login extends React.Component {
@@ -21,9 +21,9 @@ class Login extends React.Component {
 
     login = e => {
         e.preventDefault();
-        axios.post('http://localhost:5000/api/login', this.state.credentials)
+        axiosWAuth().post('http://localhost:5000/api/login', this.state.credentials)
             .then(res => {
-                localStorage.setItem('token', JSON.stringify(res.data.payload));
+                localStorage.setItem('token', res.data.payload);
                 this.props.history.push('/friends');
             })
             .catch(err => console.log(err.res));

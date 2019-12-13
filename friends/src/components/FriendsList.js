@@ -1,38 +1,25 @@
-import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-import axiosWAuth from '../helpers.js/axiosWAuth';
+// import React, { useState, useEffect } from 'react';
+// import axiosWAuth from '../helpers.js/axiosWAuth';
+// import Friends from './Friends';
 
-// class FriendsList extends React.Component {
-    // componentDidMount() {
-    //     this.getData();
-    // };
+// const FriendsList = () => {
+//     const [friendsList, setFriendsList] = useState([]);
 
-    // getData = () => {
-    //     axios.get('http:localhost:5000/api/data')
-    // };
+//         useEffect(() => {
+//             axiosWAuth().get('http://localhost:5000/api/friends')
+//                 .then(res => {setFriendsList(res.data)
+//                     console.log('friends', res.data)
+//                 })
+//                 .catch(err => console.log(err.res))
+//         }, []);
 
-   const Friends = (props) => {
-        const [friendsList, setFriendsList] = useState([]);
+//     return (
+//         <div>
+//             {/* {friendsList.map(friend => {
+//                 <Friends key={friend.id} friend={friend} />
+//             })} */}
+//         </div>
+//     )
+// }
 
-        useEffect(() => {
-            axiosWAuth().get('http://localhost:5000/api/friends')
-                .then(res => {setFriendsList(res.data)
-                    console.log('friends', res.data)
-                })
-            
-                .catch(err => console.log(err.res))
-        }, []);
-
-        return (
-            <div>
-                <h2>Friends</h2>
-                {/* {friendsList.map(friend => {
-                   return (<div key={friend.id}
-                > {friend.name} /> */}
-            </div>
-                   )}
-                // );
-            // };
-        
-        
-export default Friends;
+// export default FriendsList;
